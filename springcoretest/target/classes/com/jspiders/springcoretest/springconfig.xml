@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean name="student1" class="com.jspiders.springcoretest.Student">
+	
+	<property name="id" value="101"/>
+	<property name="name" value="Mahesh"/>
+	<property name="marks" value="35"/>
+	
+	</bean>
+	
+	<bean name="student2" class="com.jspiders.springcoretest.Student">
+	
+	<property name="id" value="202"/>
+	<property name="name" value="Sandeep"/>
+	<property name="marks" value="99.99"/>
+	
+	</bean>
+	
+	<bean name="student3" class="com.jspiders.springcoretest.Student">
+	
+	<property name="id" value="303"/>
+	<property name="name" value="Kajal"/>
+	<property name="marks" value="90"/>
+	
+	</bean>
+	
+	<bean name="branch1" class="com.jspiders.springcoretest.Branch">
+	<property name="branchCode" value="b11"/>
+	<property name="branchName" value="CSE"/>
+	<property name="students">
+	<set>
+		<ref bean="student1"/>
+		<ref bean="student2"/>
+	</set>
+	</property>
+	</bean>
+	
+	<bean name="branch2" class="com.jspiders.springcoretest.Branch">
+	<property name="branchCode" value="b12"/>
+	<property name="branchName" value="ECE"/>
+	<property name="students">
+	<set>
+		<ref bean="student3"/>
+	</set>
+	</property>
+	</bean>
+	
+	
+	<bean name="college" class="com.jspiders.springcoretest.College">
+	<property name="collegeCode" value="abc123" />
+	<property name="collegeName" value="PES" />
+	<property name="branches">
+	<set>
+		<ref bean="branch1"/>
+		<ref bean="branch2"/>
+	</set>
+	</property>
+	</bean>
+	
+	
+</beans>

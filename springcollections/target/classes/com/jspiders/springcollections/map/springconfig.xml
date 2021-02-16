@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean name="country" class="com.jspiders.springcollections.map.Country"
+	p:name="India">
+	
+	<property name="stateAndLangs">
+	<map>
+	<entry>
+	 <key>
+	 	<value>Karnataka</value>
+	 </key>
+	 <value>
+	 	Kannada
+	 </value>
+	</entry>
+	
+	<entry key="Andra Pradesh">
+		<value>
+		Telugu
+		</value>
+	</entry>
+	
+	<entry value="Hindi">
+	
+	<key>
+		<value>Delhi</value>
+	</key>
+	
+	</entry>
+	
+	<entry key="Tamilnadu" value="Tamil"/>
+	
+	</map>
+	</property>
+	
+	
+	</bean>
+	
+</beans>
